@@ -27,7 +27,8 @@ def c_is_fun(text=""):
 @app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python_is_cool(text="is cool"):
-    """This function prints Python is cool followed by text passed as a subdomain"""
+    """This function prints Python is cool followed by
+    text passed as a subdomain"""
     text = text.replace("_", " ")
     return "Python {}".format(text)
 
@@ -55,7 +56,8 @@ def number_template(n):
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
 def odd_or_even(n):
     """
-        It returns the string "odd" if the number is odd, and "even" if the number is even.
+        It returns the string "odd" if the number is odd,
+        and "even" if the number is even.
         :param n: an integer
     """
     app.jinja_env.trim_blocks = True
